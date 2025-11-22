@@ -147,5 +147,20 @@
 </head><body>
      <div id="menuSettingsContainer" style="display:none">
 <p class="control-setting"><b>menu control settings options : </b> Change Designs, options deletion/insertion, and update prices effectively </p></div>
+<div id="kitchenView" class="container">
+    <label for="priceUpdate">Update Prices:</label>
+    <input type="text" id="priceUpdate" name="priceUpdate" placeholder="Enter new price">
+    <button onclick="updatePrice()">Save</button>
+</div>
 <container>render out settings for item data and linked site into backend/<container></p>
+<script>
+    function updatePrice() {
+        const newPrice = document.getElementById('priceUpdate').value;
+        if(newPrice) {
+            alert(`New price set to ${newPrice}`);
+        } else {
+            alert('Please enter a price to update.');
+        }
+    }
+</script>
 </body></html>
